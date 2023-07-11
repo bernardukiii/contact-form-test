@@ -1,0 +1,23 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "Jest Puppeteer simple tests",
+  "main": "bdki-portfolio-test.js",
+  "scripts": {
+    "test": "jest node --experimental-vm-modules ./node_modules/.bin/jest"
+  },
+  "author": "bernardukiii",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "babel-jest": "^29.6.1",
+    "esm": "^3.2.25",
+    "jest": "^29.6.1",
+    "jest-puppeteer": "^9.0.0"
+  },
+  "dependencies": {
+    "semver": "^7.5.4",
+    "word-wrap": "^1.2.3"
+  }
+}
