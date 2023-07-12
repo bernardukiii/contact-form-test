@@ -4,15 +4,6 @@
 // 3) I need to fill them using fill input field and the click the send button
 // Make sure to setTimeOut() for a couple seconds so it goes slowly and I can check what it goes doing
 
-import puppeteer from 'jest-puppeteer';
-
-export async function goToPage() {
-    let browser, page;
-
-    browser = await puppeteer.launch();
-    page = await browser.newPage();
+export async function goToBDKI(page) {
     await page.goto('https://bdki-portfolio.vercel.app/');
-    setTimeout(5000)
-
-    console.log('Success. Page is open!')
 }
