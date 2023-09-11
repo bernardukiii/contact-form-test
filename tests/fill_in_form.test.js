@@ -1,17 +1,44 @@
-// Here I need to write the actual tests that call the functions in the js file. All of them need to be set with async await
+const { beforeAll, afterAll, describe, it, waitForXPath } = require('@jest/globals');
+const puppeteer = require('puppeteer');
 
-import puppeteer from 'puppeteer';
-import { goToBDKI } from './bdki-portfolio'
-
-beforeAll( async () => {
-  const browser = await puppeteer.launch({ headless: false })
-  const page = await browser.newPage()
-  await goToBDKI(page)
-  return browser
-})
-
+// afterAll( async () => {
+//   await browser.close()
+//   console.log('After')
+// })
+var browser, page 
 describe('Open page in browser', () => {
-    test('Opens portfolio', async () => {
-      console.log(page)
-    });
-});
+  
+  beforeAll( async () => {
+    browser = await puppeteer.launch({ headless: false })
+    page = await browser.newPage()
+    await page.goto('http://localhost:3000/');
+  
+  })
+
+  afterAll( async () => {
+    browser.close()
+  })
+  
+  it('Fills in form', async () => {
+    // Going down to contact form
+    var contactButton = await page.$x('//button[contains(text(), "CONTACT")]')
+    if (contactButton.length > 0) {
+      contactButton[0].click()
+    } else {
+      console.log('Button not found')
+    }
+    // Filling form
+    var nameField = await page.$x("//input[@name='userName']")
+    var surnameField = await page.$x("//input[@name='userSurname']")
+    var emailField = await page.$x("//input[@name='userEmail']")
+    var textField = await page.$x("//textarea[@name='userMessage']")
+    var submitButton = await page.$x("//button[contains(text(), 'SUBMIT')]")
+
+    await nameField[0].type('Test')
+    await surnameField[0].type('Testing')
+    await emailField[0].type('bdki.development@gmail.com')
+    await textField[0].type('Just testing to see that this works properly.')
+    await submitButton[0].click()
+
+  }, 10000)
+})
