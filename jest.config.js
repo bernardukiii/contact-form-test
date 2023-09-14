@@ -8,7 +8,4 @@ module.exports = {
     transform: {
         '^.+\\.jsx?$': 'babel-jest',    
     },
-    launch:  {
-        headless: true
-    }
 };
