@@ -4,7 +4,7 @@
   "description": "Jest Puppeteer simple tests",
   "main": "bdki-portfolio-test.js",
   "scripts": {
-    "test": "jest node --experimental-vm-modules ./node_modules/.bin/jest"
+    "test": "jest node ./node_modules/.bin/jest"
   },
   "author": "bernardukiii",
   "license": "ISC",
