@@ -16,5 +16,5 @@ jobs:
       - name: npm install
         run: npm ci
       - name: tests
-        run: fill_in_form.test.js
+        run: npm test
         
