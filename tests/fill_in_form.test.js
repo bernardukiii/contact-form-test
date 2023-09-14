@@ -1,10 +1,6 @@
-const { beforeAll, afterAll, describe, it, waitForXPath } = require('@jest/globals');
+const { beforeAll, afterAll, describe, it } = require('@jest/globals');
 const puppeteer = require('puppeteer');
 
-// afterAll( async () => {
-//   await browser.close()
-//   console.log('After')
-// })
 var browser, page 
 describe('Open page in browser', () => {
   
