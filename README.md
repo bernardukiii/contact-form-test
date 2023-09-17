@@ -6,3 +6,4 @@
 <li>Jest</li>
 <li>Puppeteer</li>
 </ol>
+<textarea>Working on a Github Action to automate the test case. Soo...</textarea>
