@@ -3,7 +3,7 @@ run-name: Testing contact form for bdki-portfolio
 on: [push]
 defaults:
   run: 
-    working-directory: ./tests
+    working-directory: tests
 jobs:
   test:
     runs-on: ubuntu-latest
