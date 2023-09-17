@@ -8,7 +8,7 @@ describe('Open page in browser', () => {
   beforeAll( async () => {
     browser = await puppeteer.launch({ headless: true })
     page = await browser.newPage()
-    await page.goto('http://localhost:3000/');
+    await page.goto('https://bdki-portfolio.vercel.app/');
   
   })
 
