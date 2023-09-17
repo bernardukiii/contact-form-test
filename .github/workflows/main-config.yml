@@ -16,6 +16,5 @@ jobs:
       - name: npm install
         run: npm ci
       - name: Contact form test
-        working-directory: ./tests
         run: npm test
         
