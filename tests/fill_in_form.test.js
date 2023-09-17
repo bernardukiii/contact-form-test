@@ -1,14 +1,14 @@
 const { beforeAll, afterAll, describe, it } = require('@jest/globals');
 const puppeteer = require('puppeteer');
 
-function fillContactForm() {
+function fillContactForm(URL) {
   var browser, page 
   describe('Open page in browser', () => {
     
     beforeAll( async () => {
       browser = await puppeteer.launch({ headless: false })
       page = await browser.newPage()
-      await page.goto('http://localhost:3000/');
+      await page.goto(URL);
     
     })
 
@@ -41,4 +41,4 @@ function fillContactForm() {
   })
 }
 
-export default fillContactForm() 
+export default fillContactForm()
