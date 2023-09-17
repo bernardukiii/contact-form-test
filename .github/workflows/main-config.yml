@@ -1,6 +1,8 @@
 name: Contact for Jest Test
 run-name: Testing contact form for bdki-portfolio
-on: [push]
+on:
+  schedule: 
+    - cron: '0 0 1 * *'
 jobs:
   test:
     runs-on: ubuntu-latest
