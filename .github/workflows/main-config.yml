@@ -1,9 +1,6 @@
 name: Contact for Jest Test
 run-name: Testing contact form for bdki-portfolio
-on:
-  push:
-    paths: 
-      - './tests'
+on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
